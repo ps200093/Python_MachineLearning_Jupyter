@@ -28,17 +28,6 @@ a = "안녕"
 b = "하세요."
 print(a + b)    # 안녕하세요.
 
-# import Tensorflow lib
-import tensorflow as tf
-
-# output sentence
-hello = tf.constant("Hello, World!")
-
-print(type(hello))                      # <class 'tensorflow.python.framework.ops.EagerTensor'>
-print(hello)                            # tf.Tensor(b'Hello, World!', shape=(), dtype=string)
-print(hello.numpy())                    # b'Hello, World!'
-print(hello.numpy().decode('utf-8'))    # Hello, World!
-
 # input value
 inputString = input("문자열 입력 : ")
 print(inputString)
@@ -52,3 +41,15 @@ print("float : ", i)    # float :  50.5
 
 i = int(i)              # i == int
 print("int : ", i)      # int :  50
+
+# Tensorflow string
+# import Tensorflow lib
+import tensorflow as tf
+
+# output sentence
+hello = tf.constant("Hello, World!")
+
+print(type(hello))                      # <class 'tensorflow.python.framework.ops.EagerTensor'>
+print(hello)                            # tf.Tensor(b'Hello, World!', shape=(), dtype=string)
+print(hello.numpy())                    # b'Hello, World!'
+print(hello.numpy().decode('utf-8'))    # Hello, World!
