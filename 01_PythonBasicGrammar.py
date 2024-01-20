@@ -38,3 +38,17 @@ print(type(hello))                      # <class 'tensorflow.python.framework.op
 print(hello)                            # tf.Tensor(b'Hello, World!', shape=(), dtype=string)
 print(hello.numpy())                    # b'Hello, World!'
 print(hello.numpy().decode('utf-8'))    # Hello, World!
+
+# input value
+inputString = input("문자열 입력 : ")
+print(inputString)
+
+# type casting
+i = '50.5'              # i == str
+print("str : ", i)      # str :  '50.5'
+
+i = float(i)            # i == float
+print("float : ", i)    # float :  50.5
+
+i = int(i)              # i == int
+print("int : ", i)      # int :  50
