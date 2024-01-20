@@ -1,5 +1,5 @@
 # for 문
-
+# 다양한 형태로 사용 가능
 for i in range(5):
     print(i, end=' ')  # 0 1 2 3 4
 print('\n')
@@ -18,7 +18,7 @@ for i in numList:  # 리스트의 각 요소 접근
 print('\n')
 
 # while 문
-
+# 조건으로 사용할 변수 설정이 필요
 i = 0
 while i < 5:
     print(i, end=' ')  # 0 1 2 3 4
