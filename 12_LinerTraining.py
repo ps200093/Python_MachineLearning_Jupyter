@@ -2,6 +2,7 @@ import tensorflow as tf
 import matplotlib.pyplot as plt
 import numpy as np
 
+# data set
 x_data = [1, 2, 3, 4]
 y_data = [2, 1, 4, 3]
 
@@ -9,9 +10,10 @@ y_data = [2, 1, 4, 3]
 W = tf.Variable(tf.random.normal([1]))
 b = tf.Variable(tf.random.normal([1]))
 
+# learning rate = 0.01
 learning_rate = 0.01
 
-def gradientDescent():
+def gradientDescent():  # Create Model
   model = W * x_data + b  # y = H(x) + b
   W_gradient = tf.reduce_mean((model - y_data) * x_data)
   b_gradient = tf.reduce_mean((model  - y_data))
@@ -19,7 +21,7 @@ def gradientDescent():
   W_descent = W - learning_rate * W_gradient
   b_descent = b - learning_rate * b_gradient
 
-  # update values
+  # update weights
   W.assign(W_descent)
   b.assign(b_descent)
 
